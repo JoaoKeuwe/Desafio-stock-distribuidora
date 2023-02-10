@@ -1,4 +1,4 @@
-# Upgrade Challenge
+# FE Challenge
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ The review team will be evaluating your solution based on:
 - JavaScript Knowledge: Good usage of language features in order to solve the proposed problem
 - UX/UI: Consistent usage of good user experience patterns and overall attention to detail
 
-_If you have questions regarding the challenge or feel the instructions are unclear, please reach out to your contact at Upgrade._
+_If you have questions regarding the challenge or feel the instructions are unclear, please reach out to your contact at Stock/Studica.
 
 ## Implementing your solution
 
