@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import './signUp.css'
 import Header from '../Header/Header'
 import { Link } from "react-router-dom";
+import Context from "../../context/context";
 
 function SignUpForm() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+
+  const {name,  setName, email, setEmail, password, setPassword } = useContext(Context);
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -20,12 +20,12 @@ function SignUpForm() {
     setPassword(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    // event.preventDefault();
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Password:', password);
-  }
+  // const handleSubmit = (event) => {
+  //   // event.preventDefault();
+  //   console.log('Name:', name);
+  //   console.log('Email:', email);
+  //   console.log('Password:', password);
+  // }
 
   return (
     <div>
@@ -85,14 +85,14 @@ function SignUpForm() {
             name="password" />
         </div>
 
-    <Link to="/more-info">
-       
+        <Link to="/more-info">
+
           <button type="button"
-            onClick={handleSubmit}
+            // onClick={handleSubmit}
             className="button">
             Next
           </button>
-        
+
         </Link>
       </form>
 

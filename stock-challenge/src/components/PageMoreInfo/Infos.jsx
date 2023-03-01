@@ -1,11 +1,14 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+import Context from '../../context/context';
+import { Link } from 'react-router-dom';
 import Header from '../Header/Header'
 import '../PageMoreInfo/Infos.css'
 
 function Infos() {
+  const { selectedColor, setSelectedColor } = useContext(Context);
   const [colors, setColors] = useState([]);
-  const [selectedColor, setSelectedColor] = useState('');
+  
 
   useEffect(() => {
     async function fetchColors() {
@@ -16,6 +19,7 @@ function Infos() {
   }, []);
 
   const handleColorSelect = (event) => {
+    console.log((event.target.value));
     setSelectedColor(event.target.value);
   };
   return (
@@ -40,8 +44,18 @@ function Infos() {
         </section>
 
         <div>
-          <a href="/"> <button className='button-info'>Voltar</button> </a>
-          <a href="/confirmation"> <button className='button-info'>Próxima</button> </a>
+          
+          <Link to="/">
+            <button className='button-info'>
+              Voltar
+            </button>
+          </Link>
+
+          <Link to="/confirmation">
+            <button className='button-info'>
+              Próxima
+            </button>
+          </Link>
         </div>
 
       </section>
