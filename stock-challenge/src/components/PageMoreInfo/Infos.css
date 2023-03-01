@@ -1,3 +1,30 @@
+.dropdown {
+ transition: all 2s;
+}
+
+.dropdown select {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    appearance: none;
+    width: 9rem;
+    margin-bottom: 5rem;
+    background-color: #738bf8;
+    transition: all 0.7s;
+  }
+  
+  .dropdown select:hover, .dropdown select:focus {
+    outline: none;
+    border-color: #999;
+  }
+  
+  .dropdown select option {
+    font-size: 1rem;
+  }
+  
+
 body {
     font-family: 'Inter';
     background-color: #484848;
@@ -29,14 +56,12 @@ a {
     text-decoration: none;
 }
 
-.dropdown-container {}
 
 .terms {
     display: flex;
-    padding: 1rem;
+    padding-top: 3rem;
 }
 
-.checkbox {}
 
 .label-info {
     padding-left: 1rem;

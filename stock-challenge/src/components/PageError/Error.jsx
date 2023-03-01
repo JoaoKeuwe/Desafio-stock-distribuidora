@@ -12,6 +12,7 @@ function Error() {
           <p className='message-error'>Ops, ocorreu um erro. Volte e tente novamente mais tarde! <br/> 😓</p>
           <a href="/"> <button className='button-error'>Restart</button> </a>
         </div>
+        
       </main>
     </div>
   )

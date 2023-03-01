@@ -1,23 +1,37 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import Header from '../Header/Header'
 import '../PageMoreInfo/Infos.css'
 
 function Infos() {
+  const [colors, setColors] = useState([]);
+  const [selectedColor, setSelectedColor] = useState('');
+
+  useEffect(() => {
+    async function fetchColors() {
+      const response = await axios.get('http://localhost:3001/api/colors');
+      setColors(response.data);
+    }
+    fetchColors();
+  }, []);
+
+  const handleColorSelect = (event) => {
+    setSelectedColor(event.target.value);
+  };
   return (
     <main>
       <Header />
+
       <section className='info'>
         <h1>Informações adicionais</h1>
+        <div className="dropdown">
+          <select value={selectedColor} onChange={handleColorSelect}>
+            <option value="">Selecione sua cor</option>
+            {colors.map((color) => (
+              <option key={color} value={color}>{color}</option>
+            ))}
+          </select>
 
-        <div class="dropdown-container">
-          <input type="checkbox" id="dropdown-toggle" />
-          <label className='label-toggle' for="dropdown-toggle">Select your favorite color</label>
-          <ul class='dropdown-content'>
-            <li className='options-language'><a href="##"><img className='flag' alt="" /> PT-BR</a></li>
-            <li className='options-language'><a href="##"><img className='flag' alt="" />PT</a></li>
-            <li className='options-language'><a href="##"><img className='flag' alt="" />ES</a></li>
-            <li className='options-language'><a href="##"><img className='flag' alt="" />USA</a></li>
-          </ul>
         </div>
 
         <section className='terms'>
@@ -36,33 +50,3 @@ function Infos() {
 }
 
 export default Infos
-{/* <Header />
-<div className='container-info'>
-
-<h1>Additional Info</h1>
-
-<section className='info'>
-  <div class="dropdown-container">
-    <input type="checkbox" id="dropdown-toggle" />
-    <label for="dropdown-toggle">Select your favorite color</label>
-    <ul class='dropdown-content'>
-      <li className='options-language'><a href="##"><img className='flag' alt="" /> PT-BR</a></li>
-      <li className='options-language'><a href="##"><img className='flag' alt="" />PT</a></li>
-      <li className='options-language'><a href="##"><img className='flag' alt="" />ES</a></li>
-      <li className='options-language'><a href="##"><img className='flag' alt="" />USA</a></li>
-    </ul>
-  </div>
-
-</section>
-
-<div>
-  <label htmlFor="Terms">
-    <input type="checkbox" id="scales" name="Terms" />
-    I Agree to <a href="##">Terms and Conditions</a></label>
-</div>
-
-<a href="/"> <button>Back</button> </a>
-
-<a href="/confirmation"> <button>Next</button> </a>
-
-</div> */}
