@@ -9,7 +9,7 @@ function Error() {
       <main className='container-error'>
         <h1 className='h1'>Error 📛</h1>
         <div className='error'>
-          <p className='message-error'>Uh oh, something went wrong. Please try again later</p>
+          <p className='message-error'>Ops, ocorreu um erro. Volte e tente novamente mais tarde! <br/> 😓</p>
           <a href="/"> <button className='button-error'>Restart</button> </a>
         </div>
       </main>
