@@ -1,0 +1,30 @@
+.container-error {
+    background-color: rgb(193, 194, 194);
+    width: 350px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15rem;
+    border-radius: 20px;
+}
+
+.error {
+    padding-top: 8rem;
+}
+
+.message-error {
+    font-size: 1.7rem;
+   
+}
+
+.button-error {
+    margin-top: 5rem;
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+}
