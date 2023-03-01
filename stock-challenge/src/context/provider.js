@@ -7,6 +7,7 @@ export default function Provider({ children }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
+  const [checked, setChecked] = useState(false);
 
   const context = {
     name,
@@ -17,6 +18,8 @@ export default function Provider({ children }) {
     setPassword,
     selectedColor,
     setSelectedColor,
+    checked,
+    setChecked,
   };
   return <Context.Provider value={context}>{children}</Context.Provider>;
 }
