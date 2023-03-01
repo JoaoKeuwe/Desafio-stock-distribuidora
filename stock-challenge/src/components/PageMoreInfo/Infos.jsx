@@ -6,9 +6,8 @@ import Header from '../Header/Header'
 import '../PageMoreInfo/Infos.css'
 
 function Infos() {
-  const { selectedColor, setSelectedColor } = useContext(Context);
+  const { selectedColor, setSelectedColor, checked, setChecked } = useContext(Context);
   const [colors, setColors] = useState([]);
-  
 
   useEffect(() => {
     async function fetchColors() {
@@ -17,6 +16,10 @@ function Infos() {
     }
     fetchColors();
   }, []);
+
+  const handleChecked = (setChecked) => {
+    setChecked((prevState) => !prevState)
+  }
 
   const handleColorSelect = (event) => {
     console.log((event.target.value));
@@ -27,24 +30,49 @@ function Infos() {
       <Header />
 
       <section className='info'>
-        <h1>Informações adicionais</h1>
-        <div className="dropdown">
-          <select value={selectedColor} onChange={handleColorSelect}>
-            <option value="">Selecione sua cor</option>
+        <h1 className='informations'>Informações adicionais</h1>
+
+        <div className="dropdown" style={{ width: '-webkit-fill-available' }}>
+          <select value={selectedColor}
+            onChange={handleColorSelect}
+            style={{
+              backgroundColor: selectedColor,
+              color: `${selectedColor !== "" ?
+                selectedColor === 'white' ?
+                  'black' : 'white' : 'black'}`
+            }} >
+
+            <option value="">Selecione sua cor favorita</option>
+
             {colors.map((color) => (
               <option key={color} value={color}>{color}</option>
             ))}
-          </select>
 
+            {selectedColor && (
+              <div className="selected-color" style={{ backgroundColor: selectedColor }}></div>
+            )}
+
+          </select>
         </div>
 
         <section className='terms'>
-          <input className='checkbox' type="checkbox" id="scales" name="Terms" />
-          <label className='label-info' htmlFor="Terms">I Agree to <a href="##">Terms and Conditions</a></label>
+
+          <input className='checkbox'
+            type="checkbox"
+            id="scales"
+            name="Terms"
+            checked={checked}
+            onClick={() => handleChecked(setChecked)} />
+
+          <label className='label-info'
+            htmlFor="Terms">
+            I Agree to <a href="##">Terms and Conditions <span className='star'>*</span> 
+            </a>
+          </label>
         </section>
 
         <div>
-          
+
           <Link to="/">
             <button className='button-info'>
               Voltar
