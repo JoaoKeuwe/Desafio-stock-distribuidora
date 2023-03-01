@@ -30,8 +30,8 @@ function SignUpForm() {
   return (
     <div>
       <Header />
-      <form className="form" >
-        <h1 className="title">Sign Up</h1>
+      <span className="form" >
+        <h1 className="title">Login</h1>
         <div className="form-group">
 
           <label
@@ -94,7 +94,7 @@ function SignUpForm() {
           </button>
 
         </Link>
-      </form>
+      </span>
 
     </div>
   );
