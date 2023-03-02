@@ -6,7 +6,10 @@ Projeto Stock Distribuidora 🚚
 
 ## (📱Caso esteja pelo celular é so clicar no link abaixo📱)
 
-https://user-images.githubusercontent.com/91097315/219524614-b58f26f9-47d4-4878-975f-bde441b22fc2.mp4
+
+
+https://user-images.githubusercontent.com/91097315/222325287-5051532a-2a20-4bb0-ac14-fa0374a810bf.mp4
+
 
 ## Sobre o Projeto
 
@@ -25,7 +28,7 @@ https://user-images.githubusercontent.com/91097315/219524614-b58f26f9-47d4-4878-
 - Consumo de uma API passada por eles.
 - [ReactJs](https://pt-br.reactjs.org/)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-- [React loadingg](https://testing-library.com/docs/react-testing-library/intro/)
+- [React loadingg](https://www.npmjs.com/package/react-loadingg)
 - [Google fonts | Icons](https://fonts.google.com/)
 
 # Sobre o que foi desenvolvido no projeto:
