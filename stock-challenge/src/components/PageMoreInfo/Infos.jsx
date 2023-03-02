@@ -6,7 +6,6 @@ import Header from '../Header/Header'
 import '../PageMoreInfo/Infos.css'
 import { SemipolarLoading } from 'react-loadingg';
 
-
 function Infos() {
   const { selectedColor, setSelectedColor, checked, setChecked, name, email, password } = useContext(Context);
   const [colors, setColors] = useState([]);
@@ -18,21 +17,6 @@ function Infos() {
     }
     fetchColors();
   }, []);
-
-
-  // async function fetchColors() {
-  //   const response = await axios.post('http://localhost:3001/api/submit', {
-  //     name: name,
-  //     email: email,
-  //     password: password,
-  //     color: selectedColor,
-  //     terms: checked
-  //   });
-  //   if (response.data === "OK"){
-
-  //     console.log(response, 'chegou aqui');
-  //   }
-  // }
 
   const handleChecked = (setChecked) => {
     setChecked((prevState) => !prevState)

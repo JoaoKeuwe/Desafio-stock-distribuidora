@@ -176,3 +176,19 @@ a {
     align-items: center;
     transition: 0.2s linear;
 }
+
+
+@media (max-width: 1700px) {
+    .info {
+        margin-top: 10rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .info {
+        margin-top: 6rem;
+        height: fit-content;
+    padding: 20px 0 50px 0;
+    }
+}
+
