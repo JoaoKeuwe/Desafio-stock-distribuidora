@@ -93,3 +93,11 @@ input:focus {
         
     }
 }
+
+@media (max-height: 700px) {
+    .form {
+        margin-top: 3rem;
+        height: fit-content;
+        padding: 30px 0 50px 0;
+    }
+}
