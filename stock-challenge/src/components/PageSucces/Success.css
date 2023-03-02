@@ -74,4 +74,12 @@
     }
 }
 
+@media (max-height: 850px) {
+    .container-success {
+        margin-top: 6rem;
+        height: fit-content;
+        padding: 120px 0 80px 0;
+    }
+}
+
 
