@@ -61,6 +61,8 @@
     color: white;
 }
 
+/* ------------Responsive for mobile--------------- */
+
 @media (max-width: 1700px) {
     .container-confirm {
         margin-top: 10rem;
