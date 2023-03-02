@@ -1,5 +1,5 @@
 .container-success {
-    background-color: rgb(193, 194, 194);
+    background-color: rgba(26, 247, 1, 0.644);
     width: 350px;
     height: 500px;
     display: flex;
@@ -10,10 +10,18 @@
     margin-left: auto;
     margin-top: 15rem;
     border-radius: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px 0px rgba(10, 211, 50, 0.59);
 }
 
 .h1 {
     margin-top: -6rem;
+    font-family: 'Contrail One', cursive, sans-serif;
+    color: aliceblue;
+}
+
+.span {
+    margin-left: 5px;
 }
 
 .confirm {
@@ -21,7 +29,9 @@
 }
 
 .message-confirm {
-    font-size: 1.7rem;
+    font-size: 25px;
+    font-family: 'Contrail One', cursive, sans-serif;
+    color: aliceblue;
 }
 
 .button-success {
@@ -30,4 +40,20 @@
     height: 30px;
     border-radius: 20px;
     border: none;
+    font-size: 16px;
+    font-family: 'Contrail One', cursive, sans-serif;
+    background-color: #f7f7f7d0;
+    border: 1px solid rgba(161, 158, 158, 0.728);
+    color: rgb(0, 0, 0);
 } 
+
+.button-success:hover {
+    background-color: #ebebebb6;
+}
+
+.button-success:active {
+    -webkit-box-shadow: inset 9px 8px 35px -3px rgba(0, 0, 0, 0.419);
+    -moz-box-shadow: inset 9px 8px 35px -3px rgba(0, 0, 0, 0.304);
+    box-shadow: inset 9px 8px 35px -3px rgba(0, 0, 0, 0.42);
+    transform: translate(2px, 1px);
+}

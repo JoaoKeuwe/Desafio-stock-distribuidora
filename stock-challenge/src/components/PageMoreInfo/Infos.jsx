@@ -66,15 +66,15 @@ function Infos() {
 
           <label className='label-info'
             htmlFor="Terms">
-            I Agree to <a href="##">Terms and Conditions <span className='star'>*</span> 
+            I Agree to <a href="##">Terms and Conditions <span className='star'>*</span>
             </a>
           </label>
         </section>
 
-        <div>
+        <div className='buttons'>
 
           <Link to="/">
-            <button className='button-info'>
+            <button className='button-info back'>
               Voltar
             </button>
           </Link>

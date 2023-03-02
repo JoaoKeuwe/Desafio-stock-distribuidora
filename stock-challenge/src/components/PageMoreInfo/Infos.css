@@ -11,13 +11,12 @@
     appearance: none;
     width: -webkit-fill-available;
     margin-bottom: 5rem;
-    
     transition: all 0.7s;
 }
 
 .informations {
-    font-size: 40px;
-    
+    font-size: 35px;
+    font-family: 'Contrail One', cursive, sans-serif;
 }
 
 .dropdown select:hover,
@@ -30,14 +29,15 @@
     font-size: 1rem;
 }
 
-
 body {
     font-family: 'Inter';
-    background-color: #484848;
+    background-image: radial-gradient(circle 900px at 5% 51.6%, rgba(5, 8, 114, 1) 0%, rgba(7, 3, 53, 1) 97.5%);
 }
 
 .info {
-    background-color: rgb(193, 194, 194);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px 0px rgba(10, 30, 211, 0.706);
     width: 350px;
     height: 500px;
     display: flex;
@@ -48,7 +48,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     margin-top: 15rem;
-    border-radius: 20px;
+
 }
 
 .star {
@@ -59,8 +59,30 @@ body {
     margin-top: 5rem;
     width: 120px;
     height: 30px;
-    border-radius: 20px;
+    background-color: #029363fb;
+    border-radius: 10px;
     border: none;
+    color: white;
+
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 2.5rem;
+}
+
+.back {
+    background-color: #3e3d3d69;
+    border: 1px solid rgba(161, 158, 158, 0.728);
+    color: white;
+}
+
+.button-info:active {
+    -webkit-box-shadow: inset 9px 8px 35px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 9px 8px 35px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 9px 8px 35px -3px rgba(0, 0, 0, 0.75);
+    transform: translate(2px, 1px);
 }
 
 a {
@@ -109,7 +131,7 @@ a {
     cursor: pointer;
     color: #fff;
     user-select: none;
-    
+
     display: flex;
     justify-content: center;
     font-size: 18px;
@@ -117,12 +139,10 @@ a {
 
 #dropdown-toggle {
     display: none;
-
 }
 
 #dropdown-toggle:checked~.dropdown-content {
     display: block;
-
 }
 
 .dropdown-content {
@@ -130,18 +150,15 @@ a {
     padding: 0;
     display: none;
     margin: 15px 0 0;
-
 }
 
 .dropdown-content li {
     padding: 0.5rem 0;
     border-bottom: 1px solid #eee;
-
 }
 
 .dropdown-content li:last-child {
     border-bottom: 0;
-
 }
 
 .dropdown-content a {
@@ -153,5 +170,4 @@ a {
     display: flex;
     align-items: center;
     transition: 0.2s linear;
-
 }
