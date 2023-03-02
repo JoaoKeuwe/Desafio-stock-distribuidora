@@ -4,9 +4,11 @@ import Context from '../../context/context';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header'
 import '../PageMoreInfo/Infos.css'
+import { SemipolarLoading } from 'react-loadingg';
+
 
 function Infos() {
-  const { selectedColor, setSelectedColor, checked, setChecked } = useContext(Context);
+  const { selectedColor, setSelectedColor, checked, setChecked, name, email, password } = useContext(Context);
   const [colors, setColors] = useState([]);
 
   useEffect(() => {
@@ -16,6 +18,21 @@ function Infos() {
     }
     fetchColors();
   }, []);
+
+
+  // async function fetchColors() {
+  //   const response = await axios.post('http://localhost:3001/api/submit', {
+  //     name: name,
+  //     email: email,
+  //     password: password,
+  //     color: selectedColor,
+  //     terms: checked
+  //   });
+  //   if (response.data === "OK"){
+
+  //     console.log(response, 'chegou aqui');
+  //   }
+  // }
 
   const handleChecked = (setChecked) => {
     setChecked((prevState) => !prevState)
@@ -33,26 +50,32 @@ function Infos() {
         <h1 className='informations'>Informações adicionais</h1>
 
         <div className="dropdown" style={{ width: '-webkit-fill-available' }}>
-          <select value={selectedColor}
-            onChange={handleColorSelect}
-            style={{
-              backgroundColor: selectedColor,
-              color: `${selectedColor !== "" ?
-                selectedColor === 'white' ?
-                  'black' : 'white' : 'black'}`
-            }} >
 
-            <option value="">Selecione sua cor favorita</option>
+          {colors.length === 0 ? <span className='loading'> <SemipolarLoading style={{ position: 'relative' }} /> </span> :
 
-            {colors.map((color) => (
-              <option key={color} value={color}>{color}</option>
-            ))}
+            <select value={selectedColor}
+              onChange={handleColorSelect}
+              style={{
+                backgroundColor: selectedColor,
+                color: `${selectedColor !== "" ?
+                  selectedColor === 'white' ?
+                    'black' : 'white' : 'black'}`
+              }} >
 
-            {selectedColor && (
-              <div className="selected-color" style={{ backgroundColor: selectedColor }}></div>
-            )}
+              <option value="">Selecione sua cor favorita</option>
 
-          </select>
+              {colors.map((color) => (
+                <option key={color} value={color}>{color}</option>
+              ))}
+
+
+              {selectedColor && (
+                <div className="selected-color" style={{ backgroundColor: selectedColor }}></div>
+              )}
+
+            </select>
+          }
+
         </div>
 
         <section className='terms'>
@@ -80,7 +103,9 @@ function Infos() {
           </Link>
 
           <Link to="/confirmation">
-            <button className='button-info'>
+            <button
+             
+              className='button-info'>
               Próxima
             </button>
           </Link>
