@@ -61,6 +61,8 @@
     color: white;
 }
 
+/* ------------Responsive for mobile--------------- */
+
 @media (max-width: 1700px) {
     .container-confirm {
         margin-top: 10rem;
@@ -72,6 +74,14 @@
         margin-top: 6rem;
         height: fit-content;
     padding: 20px 0 50px 0;
+    }
+}
+
+@media (max-height: 850px) {
+    .container-confirm {
+        margin-top: 6rem;
+        height: fit-content;
+        padding: 80px 0 80px 0;
     }
 }
 
