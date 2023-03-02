@@ -60,3 +60,18 @@
     border: 1px solid rgba(156, 154, 154, 0.728);
     color: white;
 }
+
+@media (max-width: 1700px) {
+    .container-confirm {
+        margin-top: 10rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .container-confirm {
+        margin-top: 6rem;
+        height: fit-content;
+    padding: 20px 0 50px 0;
+    }
+}
+
