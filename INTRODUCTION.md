@@ -4,10 +4,7 @@ Projeto Stock Distribuidora 🚚
 
 <h1/>
 
-## (📱Caso esteja pelo celular é so clicar no link abaixo📱)
-
-
-
+## (📱Caso esteja pelo celular é so clicar no link abaixo📱
 https://user-images.githubusercontent.com/91097315/222325287-5051532a-2a20-4bb0-ac14-fa0374a810bf.mp4
 
 
