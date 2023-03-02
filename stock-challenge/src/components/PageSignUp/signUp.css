@@ -85,3 +85,11 @@ input:focus {
     padding: 20px 0 50px 0;
     }
 }
+
+@media (max-height: 850px) {
+    .form {
+        margin-top: 6rem;
+        height: fit-content;
+        
+    }
+}
