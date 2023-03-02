@@ -85,3 +85,11 @@
     }
 }
 
+@media (max-height: 700px) {
+    .container-confirm {
+        margin-top: 2rem;
+        height: fit-content;
+        padding: 30px 0 60px 0;
+    }
+}
+
