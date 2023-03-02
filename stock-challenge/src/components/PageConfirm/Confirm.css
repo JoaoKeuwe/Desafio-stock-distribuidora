@@ -1,5 +1,7 @@
 .container-confirm {
-    background-color: rgb(193, 194, 194);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px 0px rgba(10, 30, 211, 0.706);
     width: 350px;
     height: 500px;
     display: flex;
@@ -9,20 +11,22 @@
     margin-right: auto;
     margin-left: auto;
     margin-top: 15rem;
-    border-radius: 20px;
 }
 
 .informations-confirm {
     padding-top: 2rem;
     font-size: 20px;
+    font-weight: bold;
+}
+
+.title-confirm {
+    font-family: 'Contrail One', cursive;
 }
 
 .container-informations {
     display: flex;
     flex-direction: column;
     text-align: left;
-   
-    margin-right: 3rem;
 }
 
 .button-confirm {
@@ -32,4 +36,27 @@
     margin-left: 1rem;
     border-radius: 20px;
     border: none;
+    background-color: #029363fb;
+    color: white;
+}
+
+.agreed {
+    color: green;
+}
+
+.disagreed {
+    color: red;
+}
+
+.button-confirm:active {
+    -webkit-box-shadow: inset 9px 8px 35px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 9px 8px 35px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 9px 8px 35px -3px rgba(0, 0, 0, 0.75);
+    transform: translate(2px, 1px);
+}
+
+.back {
+    background-color: #3e3d3d69;
+    border: 1px solid rgba(156, 154, 154, 0.728);
+    color: white;
 }

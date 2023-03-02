@@ -12,19 +12,19 @@ function Confirm() {
         <div>
             <Header />
             <main className='container-confirm'>
-                <h1>Confirmation</h1>
+                <h1 className='title-confirm'>Confirmation</h1>
 
                 <div className='container-informations'>
                     <p className='informations-confirm'>First Name: {name}</p>
                     <p className='informations-confirm'>E-mail: {email}</p>
                     <p className='informations-confirm'>Password: *****</p>
                     <p className='informations-confirm'>Favorite Color: {selectedColor}</p>
-                    <p className='informations-confirm terms'>Terms and conditions: {checked ? <p>Aceito </p> : <p>Não Aceito </p>}</p>
+                    <p className='informations-confirm terms'> Terms and conditions: <span className='span'> {checked ? <p className='agreed'> Aceito </p> : <p className='disagreed'> Não Aceito </p>}</span></p>
                 </div>
                 <div>
 
                     <Link to="/more-info">
-                        <button className='button-confirm'>
+                        <button className='button-confirm back'>
                             Voltar
                         </button>
                     </Link>
