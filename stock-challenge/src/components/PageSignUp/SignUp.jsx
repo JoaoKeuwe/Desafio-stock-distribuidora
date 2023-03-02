@@ -6,7 +6,7 @@ import Context from "../../context/context";
 
 function SignUpForm() {
 
-  const {name,  setName, email, setEmail, password, setPassword } = useContext(Context);
+  const { name, setName, email, setEmail, password, setPassword } = useContext(Context);
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -88,9 +88,8 @@ function SignUpForm() {
         <Link to="/more-info">
 
           <button type="button"
-            // onClick={handleSubmit}
             className="button">
-            Next
+            Entrar
           </button>
 
         </Link>
