@@ -193,3 +193,11 @@ a {
     }
 }
 
+@media (max-height: 700px) {
+    .info {
+        margin-top: 2rem;
+        height: fit-content;
+        padding: 30px 0 70px 0;
+    }
+}
+
