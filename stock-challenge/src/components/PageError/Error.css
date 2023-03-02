@@ -45,6 +45,8 @@
     transform: translate(2px, 1px);
 }
 
+/* ------------Responsive for mobile--------------- */
+
 @media (max-width: 1700px) {
     .container-error {
         margin-top: 10rem;
